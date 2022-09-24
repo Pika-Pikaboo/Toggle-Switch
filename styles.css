@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: background-color 0.5s ease-in-out;
+}
+
+input {
+	-webkit-appearance: none;
+	appearance: none;
+	position: relative;
+	width: 200px;
+	height: 100px;
+	background-image: url(https://i.postimg.cc/zfGxqS8X/16457376-9zly-8ztc-210511.jpg);
+	background-size: cover;
+	background-position: center;
+	border-radius: 50px;
+	outline: none;
+	box-shadow: 0px 2px 5px 1px whitesmoke;
+}
+
+input::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100px;
+	width: 100px;
+	border-radius: 50px;
+	transition: all 0.5s;
+	background-color: #F7CA33;
+}
+
+input:checked {
+	background-image: url(https://i.postimg.cc/XJTLKRFp/18505237-SL-072620-33020-24.jpg);
+}
+
+input:checked::before {
+	transform: translate(100%);
+	transition: all 0.5s;
+	background-color: #ECF0F3;
+}
+
+.dark {
+	background-color: #1E293B;
+}
